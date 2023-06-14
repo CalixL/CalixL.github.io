@@ -49,7 +49,7 @@ main {
 }
 
  body{
-    background: rgb(11, 87, 122);
+    background: rgb(11, 109, 122);
     color: rgb(45, 45, 45);
     padding: 19px;;
     font-family:fantasy;
@@ -88,8 +88,8 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(255, 255, 255);
-    display: groove;
+    background: rgb(55, 140, 146);
+    display: 7px grid;
 }
 .sidebar {
     margin-right: 500px;
@@ -117,15 +117,15 @@ h2, h3 {
 }
 
 #portfolio {
-    list-style-type: outset;
-    padding-left: 7;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 #portfolio li {
     background: #a6cf6f;
-    padding: 17px;
+    padding: 10px;
     border-radius: 242px;
-    margin-bottom: 386px;
+    margin-bottom: 10px;
 }
 
 #portfolio li:hover {
