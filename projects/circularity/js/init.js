@@ -32,12 +32,11 @@ var init = function (window) {
 
         }
         // TODO 3 / 7 : Call the drawCircle() function 
-        function drawCircle()
-        function drawCircle()
-        function drawCircle()
-        function drawCircle()
-        function drawCircle()
-
+        drawCircle
+        drawCircle
+        drawCircle
+        drawCircle
+        drawCircle
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -82,37 +81,37 @@ var init = function (window) {
                 circle.x = canvas.width
             }
             if (circle.y > canvas.height) {
-               circle.y = 0 
+                circle.y = 0
             }
-                if (circle.y < 0) {
-                    circle.y = canvas.height
-                }
+            if (circle.y < 0) {
+                circle.y = canvas.height
+            }
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
 
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
-        
+        }
 
-        /////////////////////////////////////////////////////////////
-        // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
-        /////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////
+            // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
+            /////////////////////////////////////////////////////////////
 
-        view.addChild(fps);
-        app.addUpdateable(fps);
+            view.addChild(fps);
+            app.addUpdateable(fps);
 
-        game.circle = circle;
-        game.circles = circles;
-        game.drawCircle = drawCircle;
-        game.update = update;
+            game.circle = circle;
+            game.circles = circles;
+            game.drawCircle = drawCircle;
+            game.update = update;
 
-        app.addUpdateable(window.opspark.game);
+            app.addUpdateable(window.opspark.game);
+        }
+    };
+
+    // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+    if ((typeof process !== 'undefined') &&
+        (typeof process.versions.node !== 'undefined')) {
+        // here, export any references you need for tests //
+        module.exports = init;
     }
-};
-
-// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if ((typeof process !== 'undefined') &&
-    (typeof process.versions.node !== 'undefined')) {
-    // here, export any references you need for tests //
-    module.exports = init;
-}
