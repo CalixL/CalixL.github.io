@@ -43,26 +43,37 @@ $(document).ready(function () {
     shape: "circle",
     repeat: 3,
   };
-  datashapes.push[shape];
+  dataShapes.push(shape);
   // TODO 2: add a new property to all data shapes
-  for(var i = 0; i < datashapes.length; i++) {
+  for(var i = 0; i < dataShapes.length; i++) {
+    var currentShape = dataShapes[i];
+
+    if("red" === currentShape.color) {
+      currentShape.goodBehavior = "bounce"
+    }
+    if("blue" === currentShape.color) {
+      currentShape.goodBehavior = "blink"
+    }
+    else if (currentShape.color) {
+      currentShape,goodBehavior = "spin"
+    }
   }
 
 
   // TODO 3-a: add a function that handles the static display type
-  handleStatic(data);{
-    setBackgroundWithMixed(data);
+  function handleStatic(data){
+    setBackgroundWithObject(data);
     animationDetails.displayType = 1;
   }
 
   // TODO 4-a: add a function that handles the good display type
- handleGood(color,shape,repeat);{
-  setBackgroundWithMixed(color,shape,repeat);
+ function handleGood(color,shape,repeat) {
+  setBackgroundWithSimple(color,shape,repeat);
   animationDetails.displayType = 2;
  }
 
   // TODO 5-a: add a function that handles the bad display type
- handleBad(data,repeat);{
+ function handleBad(data,repeat){
     repeat = repeat + 1;
     setBackgroundWithMixed(data,repeat);
     animationDetails.displayType = 3;
@@ -74,23 +85,28 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handleStatic(datashapes[currentIndex])
+    handleStatic(dataShapes[currentIndex])
   }
 
   function goodDisplay() {
+    console.log("hello")
     // TODO 4-b: call your handleGood function
-     handleGood(data,repeat) 
-      repeat = repeat + 1
-      setBackgroundWithMixed(data.repeat);
-      animationDetails.displayType = 2;
-    
+    var currentShape = dataShapes[currentIndex];
+     handleGood(currentShape.color, currentShape.shape,currentShape.repeat) 
+      // repeat = repeat + 1
+      // setBackgroundWithSimple(color,shape,repeat);
+      // animationDetails.displayType = 2;
+      
+      
+
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-     handleBad(data,repeat) 
+    var currentShape = dataShapes[currentIndex]; 
+    handleBad(currentShape.data,currentShape.repeat) 
       repeat = repeat + 1
-      setBackgroundWithMixed(data.repeat);
+      setBackgroundWithMixed(data,repeat);
       animationDetails.displayType = 3;
     
   }
