@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 
   // TODO 3-a: add a function that handles the static display type
-  function handleStatic(data){
+  function handleStatic(data) {
     setBackgroundWithObject(data);
     animationDetails.displayType = 1;
   }
@@ -92,10 +92,8 @@ $(document).ready(function () {
     console.log("hello")
     // TODO 4-b: call your handleGood function
     var currentShape = dataShapes[currentIndex];
-     handleGood(currentShape.color, currentShape.shape,currentShape.repeat) 
-      // repeat = repeat + 1
-      // setBackgroundWithSimple(color,shape,repeat);
-      // animationDetails.displayType = 2;
+     handleGood(currentShape.color, currentShape.shape, currentShape.repeat) 
+  
       
       
 
@@ -104,10 +102,9 @@ $(document).ready(function () {
   function badDisplay() {
     // TODO 5-b: call your handleBad function
     var currentShape = dataShapes[currentIndex]; 
-    handleBad(currentShape.data,currentShape.repeat) 
-      repeat = repeat + 1
-      setBackgroundWithMixed(data,repeat);
-      animationDetails.displayType = 3;
+    var repeat = currentShape.repeat
+    handleBad(currentShape, repeat) 
+      
     
   }
 
