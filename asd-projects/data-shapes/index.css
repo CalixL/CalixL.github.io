@@ -1,13 +1,13 @@
 #board {
   width: 400px;
   margin: auto;
-  border: silver ridge 4px;
+  border: rgb(28, 151, 189) ridge 4px;
 }
 
 #info-bar {
   width: 400px;
   height: 40px;
-  background: lightgray;
+  background: rgb(21, 58, 160);
   font-size: 40px;
   text-align: center;
 }
@@ -15,25 +15,25 @@
 #shape-container {
   width: 400px;
   height: 400px;
-  background: black;
-  border-top: silver ridge 4px;
-  border-bottom: silver ridge 4px;
+  background: rgb(0, 0, 0);
+  border-top: rgb(192, 192, 192) ridge 4px;
+  border-bottom: rgb(192, 192, 192) ridge 4px;
 }
 
 #button-box {
   width: 400px;
   height: 40px;
-  background: darkgray;
+  background: rgb(184, 157, 5);
 }
 
 #shape {
-  color: white;
+  color: rgb(152, 184, 12);
   width: 100px;
   height: 100px;
   position: relative;
   top: 150px;
   left: 150px;
-  border: white solid 2px;
+  border: rgb(28, 16, 197) solid 2px;
   display: block;
 }
 
