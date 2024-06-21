@@ -32,8 +32,27 @@ function applyAndRender() {
 /////////////////////////////////////////////////////////
 
 // TODO 1, 2 & 4: Create the applyFilter function here
+const RED = 0;
+const GREEN = 1;
+const BLUE = 2;
 
+function rgbStringToArray(rgbString) {
+  return rgbString.match(/\d+/g).map(Number);
+}
 
+function applyFilter() {
+  for(let i = 0; i < image.length; i++) {
+    for(let j = 0; j < image[i].length; j++) {
+let rgbString = image[i][j];
+let rgbNumbers = rgbStringToArray(rgbString);
+
+rgbNumbers[RED] = 255;
+    }
+  }
+}
+function rgbArrayToString(rgbNumbers) {
+  return `rgb(${rgbNumbers[RED]}, $ {rgbNumbers[GREEN]}, $ {rgbNumbers[BLUE]})`
+}
 // TODO 7: Create the applyFilterNoBackground function
 
 

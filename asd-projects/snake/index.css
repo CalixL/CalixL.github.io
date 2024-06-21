@@ -7,7 +7,7 @@ body {
   width: 440px;
   height: 440px;
   border: 1px solid white;
-  background-color: black;
+  background-color: rgb(191, 25, 25);
 }
 
 #score, #highScore {
